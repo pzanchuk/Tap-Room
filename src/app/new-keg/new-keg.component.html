@@ -3,24 +3,28 @@
 </div>
 
 <div class="new-keg-form" *ngIf = "childAddKegClicked">
-  <h1>Add new keg</h1>
-  <div>
-    <label for="name">Enter name:</label>
-    <input #newName id="name">
-  </div>
-  <div>
-    <label for="brand">Enter brand:</label>
-    <input #newBrand id="brand">
-  </div>
-  <div>
-    <label for="price">Enter price:</label>
-    <input #newPrice id="price">
-  </div>
-  <div>
-    <label for="alcohol">Enter alcohol percentage:</label>
-    <input #newAlcoholContent id="alcohol">
-  </div>
-  <div class="new-keg-form-button">
-    <button class="btn btn-dark" (click)="finishedEditingClicked()" (click)="submitForm(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value); newName.value = ''; newBrand.value = ''; newPrice.value = ''; newAlcoholContent.value = '';">Save</button>
+  <div class="card">
+    <h5 class="card-header bg-dark text-white">Add new keg</h5>
+    <div class="card-body">
+      <div>
+        <label for="name">Enter name:</label>
+        <input #newName id="name">
+      </div>
+      <div>
+        <label for="brand">Enter brand:</label>
+        <input #newBrand id="brand">
+      </div>
+      <div>
+        <label for="price">Enter price:</label>
+        <input #newPrice id="price">
+      </div>
+      <div>
+        <label for="alcohol">Enter alcohol percentage:</label>
+        <input #newAlcoholContent id="alcohol">
+      </div>
+      <div class="new-keg-form-button">
+        <button class="btn btn-dark" (click)="finishedEditingClicked()" (click)="submitForm(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value); newName.value = ''; newBrand.value = ''; newPrice.value = ''; newAlcoholContent.value = '';">Save</button>
+      </div>
+    </div>
   </div>
 </div>

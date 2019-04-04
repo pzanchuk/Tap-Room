@@ -1,8 +1,16 @@
 .new-keg-form{
   width: 50%;
-  display: inline-block;
 }
 
 .button-hide{
   display: none;
+}
+
+.card-body input{
+  float: right;
+  width: 50%;
+}
+
+.card{
+  background-color: #dee2e6;
 }
