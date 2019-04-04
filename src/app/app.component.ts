@@ -9,9 +9,21 @@ import { Keg } from './models/keg.model'
 })
 export class AppComponent {
 
-  kegs: Keg[] = [];
+  masterKegList: Keg[] = [
+    new Keg('Amber', 'Alaskan', 1.5, 3.2)
+  ];
 
-  addKeg(newKeg: Keg){
-    this.kegs.push(newKeg);
+  masterSelectedKeg: Keg = null;
+
+  masterAddKeg(newKeg: Keg){
+    this.masterKegList.push(newKeg);
+  }
+
+  editingClicked(clickedKeg){
+    this.masterSelectedKeg = clickedKeg;
+  }
+
+  finishedEditing(){
+    this.masterSelectedKeg = null;
   }
 }

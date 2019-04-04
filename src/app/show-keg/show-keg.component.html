@@ -7,17 +7,21 @@
       <th scope="col">Price</th>
       <th scope="col">Alcohol</th>
       <th scope="col">Pints</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+
 
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let keg of kegList">
-      <td>{{keg.name}}</td>
-      <td>{{keg.brand}}</td>
-      <td>${{keg.price}}</td>
-      <td>{{keg.alcoholContent}}%</td>
-      <td>{{keg.pint}} <button class="btn btn-light">Sell One</button></td>
-
+    <tr *ngFor="let selectedKeg of childKegList">
+      <td>{{selectedKeg.name}}</td>
+      <td>{{selectedKeg.brand}}</td>
+      <td>${{selectedKeg.price}}</td>
+      <td>{{selectedKeg.alcoholContent}}%</td>
+      <td>{{selectedKeg.pint}}</td>
+      <td><button class="btn btn-light">Sell Pint</button></td>
+      <td><button class="btn btn-light" (click)="editButtonClicked(selectedKeg)">Edit!</button></td>
     </tr>
   </tbody>
 </table>

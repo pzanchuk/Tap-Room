@@ -8,7 +8,11 @@ import { Keg } from '../models/keg.model';
 })
 export class ShowKegComponent{
 
-  @Input() kegList: Keg[];
-  
+  @Input() childKegList: Keg[];
+  @Output() clickEdit = new EventEmitter;
+
+  editButtonClicked(childSelectedKeg: Keg) {
+  this.clickEdit.emit(childSelectedKeg);
+}
 
 }
