@@ -13,3 +13,8 @@
 table{
   border-radius: 0.3rem;
 }
+
+select{
+  color: white;
+  background-color: #343a40;
+}

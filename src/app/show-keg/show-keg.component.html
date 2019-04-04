@@ -1,4 +1,9 @@
-<h1>Available kegs</h1>
+<select (change)="onChange($event.target.value)">
+  <option value="allKegs" selected="selected">All Kegs</option>
+  <option value="10Kegs">Kegs below 10</option>
+</select>
+<br>
+<br>
 <table class="table table-striped table-dark">
   <thead>
     <tr>
@@ -13,7 +18,7 @@
   </thead>
 
   <tbody>
-    <tr [class]="alcoholColor(selectedKeg)" *ngFor="let selectedKeg of childKegList">
+    <tr [class]="alcoholColor(selectedKeg)" *ngFor="let selectedKeg of childKegList | pintcounter:filterByPints">
       <td>{{selectedKeg.name}}</td>
       <td>{{selectedKeg.brand}}</td>
       <td [class]="priceColor(selectedKeg)">${{selectedKeg.price}}</td>

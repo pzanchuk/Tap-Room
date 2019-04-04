@@ -35,4 +35,10 @@ export class ShowKegComponent{
       return "strong-beer";
     }
   }
+
+  filterByPints: string = "allKegs";
+
+  onChange(optionFromMenu) {
+  this.filterByPints = optionFromMenu;
+}
 }
