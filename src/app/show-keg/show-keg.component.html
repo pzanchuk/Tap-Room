@@ -1,27 +1,34 @@
-<h1>Available kegs</h1>
-<table class="table table-striped table-dark">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Brand</th>
-      <th scope="col">Price</th>
-      <th scope="col">Alcohol</th>
-      <th scope="col">Pints</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
+
+<div class="show-keg">
 
 
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let selectedKeg of childKegList">
-      <td>{{selectedKeg.name}}</td>
-      <td>{{selectedKeg.brand}}</td>
-      <td>${{selectedKeg.price}}</td>
-      <td>{{selectedKeg.alcoholContent}}%</td>
-      <td>{{selectedKeg.pint}}</td>
-      <td><button class="btn btn-light">Sell Pint</button></td>
-      <td><button class="btn btn-light" (click)="editButtonClicked(selectedKeg)">Edit!</button></td>
-    </tr>
-  </tbody>
-</table>
+  <h1>Available kegs</h1>
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Price</th>
+        <th scope="col">Alcohol</th>
+        <th scope="col">Pints</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let selectedKeg of childKegList">
+        <td>{{selectedKeg.name}}</td>
+        <td>{{selectedKeg.brand}}</td>
+        <td>${{selectedKeg.price}}</td>
+        <td>{{selectedKeg.alcoholContent}}%</td>
+        <td>{{selectedKeg.pint}}</td>
+        <td><button class="btn btn-light">Sell Pint</button></td>
+        <td><button class="btn btn-light" (click)="editButtonClicked(selectedKeg)">Edit!</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>

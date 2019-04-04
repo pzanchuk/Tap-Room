@@ -13,17 +13,22 @@ export class AppComponent {
     new Keg('Amber', 'Alaskan', 1.5, 3.2)
   ];
 
-  masterSelectedKeg: Keg = null;
+  masterSelectedKeg: Keg = null; //childSelectedKeg
+  masterAddKegClicked: boolean = false;
 
   masterAddKeg(newKeg: Keg){
     this.masterKegList.push(newKeg);
   }
 
-  editingClicked(clickedKeg){
-    this.masterSelectedKeg = clickedKeg;
+  editingClicked(childSelectedKeg){
+    this.masterSelectedKeg = childSelectedKeg;
   }
 
   finishedEditing(){
     this.masterSelectedKeg = null;
+  }
+
+  addKegClicked(){
+    this.masterAddKegClicked = true;
   }
 }
