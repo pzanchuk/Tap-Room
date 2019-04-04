@@ -9,6 +9,6 @@ import { Keg } from '../models/keg.model';
 export class ShowKegComponent{
 
   @Input() kegList: Keg[];
-
+  
 
 }

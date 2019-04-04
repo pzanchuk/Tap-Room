@@ -6,6 +6,7 @@
       <th scope="col">Brand</th>
       <th scope="col">Price</th>
       <th scope="col">Alcohol</th>
+      <th scope="col">Pints</th>
 
     </tr>
   </thead>
@@ -13,8 +14,10 @@
     <tr *ngFor="let keg of kegList">
       <td>{{keg.name}}</td>
       <td>{{keg.brand}}</td>
-      <td>{{keg.brand}}</td>
-      <td>{{keg.alcoholContent}}</td>
+      <td>${{keg.price}}</td>
+      <td>{{keg.alcoholContent}}%</td>
+      <td>{{keg.pint}} <button class="btn btn-light">Sell One</button></td>
+
     </tr>
   </tbody>
 </table>

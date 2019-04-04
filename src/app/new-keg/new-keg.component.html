@@ -1,18 +1,23 @@
-<h1>Add new keg</h1>
-<div>
-  <label>Enter name:</label>
-  <input #newName>
+<div class="new-keg-form">
+  <h1>Add new keg</h1>
+  <div>
+    <label for="name">Enter name:</label>
+    <input #newName id="name">
+  </div>
+  <div>
+    <label for="brand">Enter brand:</label>
+    <input #newBrand id="brand">
+  </div>
+  <div>
+    <label for="price">Enter price:</label>
+    <input #newPrice id="price">
+  </div>
+  <div>
+    <label for="alcohol">Enter alcohol percentage:</label>
+    <input #newAlcoholContent id="alcohol">
+  </div>
 </div>
-<div>
-  <label>Enter brand:</label>
-  <input #newBrand>
-</div>
-<div>
-  <label>Enter price:</label>
-  <input #newPrice>
-</div>
-<div>
-  <label>Enter alcohol %:</label>
-  <input #newAlcoholContent>
-  <button (click)="submitForm(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value)">Add keg</button>
+
+<div class="new-keg-form-button">
+  <button class="btn btn-dark" (click)="submitForm(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value); newName.value = ''; newBrand.value = ''; newPrice.value = ''; newAlcoholContent.value = '';">Add keg</button>
 </div>
