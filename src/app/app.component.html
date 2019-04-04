@@ -1,4 +1,4 @@
-<app-new-keg [childAddKegClicked]="masterAddKegClicked" (childAddKeg)="masterAddKeg($event)" (childShowAddForm)="addKegClicked()"></app-new-keg>
 
 <app-show-keg [childKegList]="masterKegList" (clickEdit)="editingClicked($event)"></app-show-keg>
 <app-edit-keg [childSelectedKeg]="masterSelectedKeg" (clickedDone)="finishedEditing()"></app-edit-keg>
+<app-new-keg [childAddKegClicked]="masterAddKegClicked" (childDoneClicked)="finishedAdding()" (childAddKeg)="masterAddKeg($event)" (childShowAddForm)="addKegClicked()"></app-new-keg>

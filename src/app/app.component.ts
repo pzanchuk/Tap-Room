@@ -10,7 +10,8 @@ import { Keg } from './models/keg.model'
 export class AppComponent {
 
   masterKegList: Keg[] = [
-    new Keg('Amber', 'Alaskan', 1.5, 3.2)
+    new Keg('Amber', 'Alaskan', 1.5, 3.2),
+    new Keg('Franziskaner ', 'Weissbier Monk', 5, 6)
   ];
 
   masterSelectedKeg: Keg = null; //childSelectedKeg
@@ -26,6 +27,10 @@ export class AppComponent {
 
   finishedEditing(){
     this.masterSelectedKeg = null;
+  }
+
+  finishedAdding(){
+    this.masterAddKegClicked = false;
   }
 
   addKegClicked(){

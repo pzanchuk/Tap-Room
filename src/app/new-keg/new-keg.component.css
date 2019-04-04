@@ -1,19 +1,8 @@
 .new-keg-form{
   width: 50%;
   display: inline-block;
-
-
 }
 
-.new-keg-form-button{
-  float: right;
-  padding-right: 30%;
-  padding-top: 10%;
-
-  display: inline-block;
-  text-align: center;
-}
-
-.new-keg{
-  background-color: #8ff981; 
+.button-hide{
+  display: none;
 }

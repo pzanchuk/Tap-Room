@@ -10,6 +10,7 @@ export class NewKegComponent{
   @Input() childAddKegClicked: boolean;
   @Output() childAddKeg = new EventEmitter();
   @Output() childShowAddForm = new EventEmitter();
+  @Output() childDoneClicked = new EventEmitter();
 
   submitForm(name: string, brand: string, price: string, alcoholContent: string){
     let newKeg: Keg = new Keg(name, brand, parseFloat(price), parseFloat(alcoholContent));
@@ -19,4 +20,16 @@ export class NewKegComponent{
   addKegClicked(){
     this.childShowAddForm.emit();
   }
+
+  hideButton(){
+    if(this.childAddKegClicked === true){
+      return "button-hide";
+    }else{
+      return "btn btn-dark";
+    }
+  }
+  finishedEditingClicked() {
+    this.childDoneClicked.emit();
+  }
+
 }
